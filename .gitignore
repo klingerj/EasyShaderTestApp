@@ -1,0 +1,6 @@
+*.obj
+Build/
+ToolsBin/.vs/
+*.swp
+*.swo
+*~
