@@ -166,7 +166,7 @@ static uint32 GameInit(uint32 windowWidth, uint32 windowHeight)
     }
     Tk::Graphics::ShaderManager::Startup();
     Tk::Graphics::ShaderManager::LoadAllShaderResources(windowWidth, windowHeight);
-    g_InputManager.BindKeycodeCallback_KeyDown(Platform::Keycode::eF11, HotloadAllShaders); // Bind shader hotloading hotkey
+    //g_InputManager.BindKeycodeCallback_KeyDown(Platform::Keycode::eF11, HotloadAllShaders); // Bind shader hotloading hotkey
 
     DebugUI::Init(&graphicsCommandStream);
 
