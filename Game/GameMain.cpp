@@ -159,11 +159,11 @@ static uint32 GameInit(uint32 windowWidth, uint32 windowHeight)
     graphicsCommandStream.m_maxCommands = TINKER_PLATFORM_GRAPHICS_COMMAND_STREAM_MAX;
     graphicsCommandStream.m_graphicsCommands = (Tk::Graphics::GraphicsCommand*)Tk::Core::CoreMallocAligned(graphicsCommandStream.m_maxCommands * sizeof(Tk::Graphics::GraphicsCommand), CACHE_LINE);
 
-    if (Tk::ShaderCompiler::Init() != Tk::ShaderCompiler::ErrCode::Success)
+    /*if (Tk::ShaderCompiler::Init() != Tk::ShaderCompiler::ErrCode::Success)
     {
         TINKER_ASSERT(0);
         Tk::Core::Utility::LogMsg("Game", "Failed to init shader compiler!", Tk::Core::Utility::LogSeverity::eCritical);
-    }
+    }*/
     Tk::Graphics::ShaderManager::Startup();
     Tk::Graphics::ShaderManager::LoadAllShaderResources(windowWidth, windowHeight);
     //g_InputManager.BindKeycodeCallback_KeyDown(Platform::Keycode::eF11, HotloadAllShaders); // Bind shader hotloading hotkey
